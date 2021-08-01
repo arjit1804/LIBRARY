@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.andmaroid.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"/>
+
+            <LinearLayout
+                android:layout_marginTop="?attr/actionBarSize"
+                android:id="@+id/llRecyclerBookRow"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imgBookDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:id="@+id/txtBookTitleDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text=""
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txtAuthorDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtBookTitleDesc"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="40dp"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/txtPriceDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtAuthorDesc"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="40dp"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llDescription"
+                android:layout_below="@id/llRecyclerBookRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/book_description"
+                    android:textSize="23sp"/>
+                <TextView
+                    android:id="@+id/txtBookDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:id="@+id/llNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_note_on_this_book"
+                        android:textSize="23sp"/>
+
+                    <Button
+                        android:id="@+id/btnMakeNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/make_note"
+                        android:layout_marginStart="10dp"
+                        android:drawableEnd="@drawable/ic_note_add"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtUserNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnCommentsSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comments_section"
+                android:layout_below="@id/llDescription"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fav_Rem_Buttons">
+
+        <Button
+            android:id="@+id/btnAddToFav"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:text="Add to favourites"/>
+        <Button
+            android:id="@+id/btnRemoveFromFav"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:text="Remove from favourites"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

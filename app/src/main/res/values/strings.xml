@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LIBRARY</string>
+    <string name="facebook_app_id">140919554798148</string>
+    <string name="fb_login_protocol_scheme">fb140919554798148</string>
+    <string name="search_on_your_own"><u>Search by Name</u></string>
+    <string name="book_description"><u>Book Description</u></string>
+    <string name="search_any_book">Search Any Book</string>
+    <string name="your_note_on_this_book"><u>Your Note On This Book</u></string>
+    <string name="comments_section">Comments Section</string>
+    <string name="make_note">make note</string>
+    <string name="save">save</string>
+    <string name="add_comment">add comment</string>
+    <string name="post">post</string>
+    <string name="or_for_more_features"><u>For More Features</u></string>
+    <string name="favourites">Favourites</string>
+    <string name="log_out">Log out</string>
+    <string name="search_genre"><u>Search by Genre</u></string>
+    <string name="or_continue_without_sign_in">or continue without sign in</string>
+</resources>
